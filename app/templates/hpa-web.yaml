@@ -10,7 +10,7 @@ spec:
     kind: Deployment
     name: {{ .Release.Name }}-web
   minReplicas: 1
-  maxReplicas: 1
+  maxReplicas: 10
   metrics:
     - type: Resource
       resource:

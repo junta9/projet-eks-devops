@@ -4,5 +4,4 @@ metadata:
   creationTimestamp: null
   name: {{ .Release.Name }}-front-cm
 data:
-  # BACKEND_URL: "mysql://root:@{{ .Release.Name }}-mysql-svc.{{ .Release.Namespace }}.svc.cluster.local:3306/tribeshomestay"
-  BACKEND_URL: {{ .Values.secrets.backendURL }}
+  BACKEND_URL: "mysql://root:@{{ .Release.Name }}-mysql-svc.{{ .Release.Namespace }}.svc.cluster.local:3306/tribeshomestay"

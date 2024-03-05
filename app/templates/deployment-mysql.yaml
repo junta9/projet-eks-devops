@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-mysql
+  labels:
+    app: {{ .Release.Name }}-mysql
+spec:
+  replicas: 
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-mysql
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-mysql
+    spec:
+      containers:
+        - name: tribeshomestay-mysql
+          image: chouvang/tribeshomestay-mysql
+          ports:
+            - containerPort: 3306
+          volumeMounts:
+            - name: mysql-data
+              mountPath: /var/lib/mysql
+          env:
+            - name: MYSQL_ALLOW_EMPTY_PASSWORD
+              value: 'yes'
+            - name: MYSQL_DATABASE
+              value: 'tribeshomestay'
+      volumes:
+        - name: mysql-data
+          persistentVolumeClaim:
+            claimName: {{ .Release.Name }}-pvc

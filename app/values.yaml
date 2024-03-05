@@ -105,6 +105,3 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
-
-secrets:
-  backendUrl: app-back-end-url

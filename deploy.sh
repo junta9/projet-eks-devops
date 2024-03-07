@@ -1,9 +1,9 @@
 #!/bin/bash
-# terraform init -upgrade
+terraform init -upgrade
+terraform validate
+terraform plan -out terraform.plan
 
-# terraform plan -out terraform.plan
-
-# terraform apply terraform.plan
+terraform apply terraform.plan
 
 aws eks --region eu-west-3 update-kubeconfig --name projet-eks
 sleep 10

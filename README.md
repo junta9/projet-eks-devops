@@ -101,3 +101,40 @@ echo "http://$ELB"
 
 kubectl get secret --namespace grafana grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
 
+grafana dashboard ID: 17119
+
+****************************************
+
+
+Métriques à surveiller sur votre infrastructure :
+Les métriques à surveiller sur votre infrastructure dépendent des objectifs de votre projet et des services que vous proposez. Cependant, voici quelques catégories de métriques génériques que vous devriez généralement surveiller :
+
+Performances:
+
+Utilisation du CPU: Pourcentage de temps CPU utilisé par les processus.
+Utilisation de la mémoire: Quantité de mémoire utilisée par les processus.
+Latence: Temps de réponse des services.
+Taux de transfert: Débit des données entrant et sortant.
+Disponibilité:
+
+Taux d'erreur: Pourcentage de requêtes qui échouent.
+Temps de disponibilité: Pourcentage de temps pendant lequel le service est disponible.
+Nombre de redémarrages: Nombre de fois que les services ont été redémarrés.
+Ressources:
+
+Utilisation du disque: Espace disque utilisé par les fichiers et les données.
+Utilisation du réseau: Quantité de trafic réseau entrant et sortant.
+Nombre de connexions: Nombre de connexions simultanées aux services.
+Sécurité:
+
+Nombre de tentatives de connexion infructueuses: Nombre de tentatives de connexion à votre infrastructure qui ont échoué.
+Nombre d'attaques: Nombre d'attaques détectées sur votre infrastructure.
+Volume de données compromises: Quantité de données qui ont été compromises en cas d'incident de sécurité.
+En plus de ces catégories génériques, il est important de surveiller les métriques spécifiques à vos services et applications. Par exemple, si vous utilisez une base de données, vous devez surveiller des métriques comme le nombre de requêtes par seconde, le temps de réponse des requêtes et la taille de la base de données.
+
+Notre équipe a eu le privilège d'être sollicitée par une grande Marque de luxe en pleine expansion. Face à l'essor de ses activités et à l'élargissement de son marché, l'entreprise reconnaît la nécessité impérative de migrer sa plateforme vers le cloud. Cette initiative vise à augmenter la scalabilité, renforcer la résilience de ses services et garantir la sécurité des transactions et des données des clients.
+
+Scalabilité : Concevoir une infrastructure cloud capable de s'adapter rapidement à l'évolution des besoins de l'entreprise, assurant une expérience utilisateur fluide même en périodes de fortes demandes.
+Résilience : Accroître la résilience du service en utilisant les fonctionnalités avancées du cloud pour garantir une disponibilité maximale et une gestion efficace des erreurs.
+Automatisation : Mettre en place des mécanismes d'automatisation pour la création, le déploiement et la gestion de l'infrastructure, minimisant ainsi les interventions manuelles et les risques d'erreurs.
+Sécurité : Prioriser la sécurité des transactions et des données des clients en mettant en œuvre les meilleures pratiques de sécurité, y compris le chiffrement des données, la gestion des accès et la surveillance proactive des menaces.

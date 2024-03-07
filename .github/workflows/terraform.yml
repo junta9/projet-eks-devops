@@ -40,7 +40,7 @@ jobs:
       
       - name: Terraform Plan
         id: plan
-        run: terraform plan -no-color
+        run: terraform plan -out terraform.plan -no-color
         continue-on-error: true
 
       - uses: actions/github-script@v6
@@ -68,6 +68,6 @@ jobs:
 
       # - name: Terraform Apply
       #   id: apply
-      #   run: terraform apply -auto-approve
+      #   run: terraform apply terraform.plan
         
 

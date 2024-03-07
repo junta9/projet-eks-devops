@@ -1,4 +1,4 @@
-name: Deploy VM EC2
+name: Deploy AWS EKS
 
 on: workflow_dispatch
 
